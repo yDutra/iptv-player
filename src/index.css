@@ -1,4 +1,6 @@
 /* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +10,15 @@
 html, body, #root {
   width: 100%;
   height: 100%;
-  background-color: #000000;
-  overflow: hidden; /* CORTA as barras de rolagem nativas - Essencial para TV */
-  font-family: sans-serif;
+  overflow: hidden; 
+  /* A fonte premium assume o controle de todo o app aqui */
+  font-family: 'Poppins', sans-serif; 
+  transition: background-color 0.3s ease;
+}
+
+/* Esconde barras de rolagem nativas */
+*::-webkit-scrollbar { display: none; }
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
