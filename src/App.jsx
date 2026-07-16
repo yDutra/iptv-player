@@ -1,18 +1,19 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import Player from './pages/Player'; // Importamos a tela nova
+import Player from './pages/Player';
+import SeriesDetails from './pages/SeriesDetails'; // NOVA IMPORTAÇÃO
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/player" element={<Player />} /> {/* Registramos a rota */}
+        <Route path="/player" element={<Player />} />
+        {/* NOVA ROTA ADICIONADA ABAIXO */}
+        <Route path="/series" element={<SeriesDetails />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
-
-export default App;
